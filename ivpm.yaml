@@ -1,0 +1,21 @@
+
+package:
+  name: zuspec
+
+  # setup-deps:
+  # - ninja
+  # - cython
+
+  dep-sets:
+
+  - name: default
+    deps:
+    - name: systemc
+      url: https://github.com/accellera-official/systemc/archive/refs/tags/2.3.4.tar.gz
+
+  - name: default-dev
+    deps:
+    - name: systemc
+      url: https://github.com/accellera-official/systemc/archive/refs/tags/2.3.4.tar.gz
+
+
