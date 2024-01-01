@@ -10,10 +10,10 @@
 
 export TEST_BUILD=../../../../../../build/tests
 
-g++ -o main main.cpp -std=c++98 \
+g++ -O3 -o main.exe main.cpp -std=c++98 \
 	-I${TEST_BUILD}/include \
 	-Wl,--whole-archive ${TEST_BUILD}/lib64/libsystemc.a -Wl,--no-whole-archive -lpthread
 if test $? -ne 0; then exit 1; fi
 
-#time ./obj_dir/Vtop
+time ./main.exe
 

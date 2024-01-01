@@ -8,8 +8,10 @@ export LD_LIBRARY_PATH=/project/tools/gcc/12.1.0/lib64:$LD_LIBRARY_PATH
 #verilator --version
 #rm -rf obj_dir
 
+export OPT_FAST=-O3
+
 verilator --binary --top top \
-	+incdir+../../../../../src \
+	+incdir+../../../../../../src \
 	+incdir+. \
 	--trace \
 	sv_tlm.sv \
